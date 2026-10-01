@@ -282,10 +282,3 @@ parallel TCP connections, which adds up against the NAT table quickly)
 | Voice calls choppy despite good signal | Confirm only one or two devices are on the AP; close other bandwidth-heavy apps; verify RSSI on the status page is better than ~-70 dBm. |
 | Forgot the SSID/password you set | Re-flash the sketch (this resets EEPROM only if you change `CONFIG_MAGIC`), or connect via serial and add a temporary `Serial.println` of `cfg` fields in `setup()` to read them back. |
 | Upload fails / "Failed to connect to ESP8266" | Hold/flash-mode issue — on NodeMCU, try a slower upload speed (115200); on bare ESP-07S, confirm GPIO0 is pulled low during reset. |
-
----
-
-## Files in this folder
-
-- `esp8266_wifi_repeater.ino` — complete firmware (flash this)
-- `README.md` — this guide
